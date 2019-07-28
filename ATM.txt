@@ -1,0 +1,24 @@
+def withdraw(amount):
+    n = float(input("Please enter the amount you wish to withdraw: "))
+    if amount > n:
+        print("Transaction Successful.")
+        balance = amount - n
+        print("Your remaining balance is: " + str(balance))
+    else:
+        print("Insufficient Funds.")
+    return n
+
+
+def card_check(n):
+    l = ["54591254", "24872514", "354785241", "125484521", "454512452", "123456789"]
+    if n in l:
+        print("WELCOME.")
+        bal = 100000
+        withdraw(bal)
+    else:
+        print("Invalid Card.")
+    return n
+
+
+i = input("Enter Card Number: ")
+card_check(i)

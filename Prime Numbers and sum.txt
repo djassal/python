@@ -1,0 +1,12 @@
+s = int(input("Enter start of interval: "))
+e = int(input("Enter end of interval: "))
+f = 0
+for x in range(s, e+1):
+    for n in range(2,x):
+        if x % n == 0:
+            break
+    else:
+        print(x)
+        c = x + f
+        f = c
+print("The sum of Prime Numbers between " + str(s) + " and " + str(e) + " is: " + str(c))
